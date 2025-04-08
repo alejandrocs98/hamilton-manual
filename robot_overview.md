@@ -35,3 +35,12 @@ This will take you to the maintenance screen, where you can select the type of m
 - **Weekly**: Inspecting and cleaning the pipetting heads, checking the gripper for wear, and ensuring all software is up to date.
 To choose the type of maintenance you would like to perform, select the appropriate icon on the maintenance screen. This will take you to a detailed guide for performing the selected maintenance task.
 ![Weekly](Images/Weekly.PNG)
+## Pipetting and Arm Systems
+### CO‑RE Pipetting Arm
+The STAR’s primary liquid‑handling arm employs Hamilton’s CO‑RE (Compressed O‑Ring Expansion) technology with disposable tips. You can equip it with an 8‑channel head for moderate‑throughput tasks—like serial dilutions, plate‑based assays, or transfers between multiple labware types—or swap in a 96‑channel head to fill or empty entire 96‑well plates in one go. CO‑RE tips “snap” into place with built‑in force sensing, ensuring consistent seating and liquid detection; this yields high accuracy and precision across a broad volume range (typically 0.5–1000 µL) while minimizing tip‑touch and carryover.
+### Fixed‑Tip Pipetting Arm
+For workflows that involve large‑volume reagent distribution or where consumable costs must be minimized, the STAR can be configured with a fixed‑tip arm. Stainless‑steel tips stay attached to the arm and are cleaned between transfers in an on‑deck wash station. This setup excels at bulk dispensing (e.g., >500 µL per channel) and repetitive transfers where cross‑contamination risk is low—but requires rigorous wash protocols and periodic tip inspection to prevent carryover.
+### Tip Gripper Arm
+Beyond liquid handling, the STAR features a dedicated gripper arm for labware manipulation. With two independent gripper modules, it can pick up and reposition plates, tube racks, reservoirs, and tip boxes anywhere on the deck. Automating tip‑rack loading, plate shuttling to off‑deck modules (like plate readers or incubators), and deck reconfiguration mid‑protocol reduces manual intervention and helps maintain reproducible orientation and spacing.
+### High‑Density Pipetting Head
+For ultra‑high‑throughput or miniaturized assays, you can add a 384‑channel pipetting head. This head handles sub‑10 µL volumes across all wells of a 384‑well plate simultaneously, making it ideal for screening campaigns or scarce sample scenarios. Because of the small volumes and high channel count, precise calibration, deck leveling, and regular performance checks are critical to maintain accuracy and avoid well‑to‑well variability.
