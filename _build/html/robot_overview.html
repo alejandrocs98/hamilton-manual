@@ -32,7 +32,7 @@
     <link rel="stylesheet" type="text/css" href="_static/styles/sphinx-book-theme.css?v=eba8b062" />
     <link rel="stylesheet" type="text/css" href="_static/togglebutton.css?v=13237357" />
     <link rel="stylesheet" type="text/css" href="_static/copybutton.css?v=76b2166b" />
-    <link rel="stylesheet" type="text/css" href="_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
+    <link rel="stylesheet" type="text/css" href="_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css?v=be8a1c11" />
     <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css?v=4fa983c6" />
     <link rel="stylesheet" type="text/css" href="_static/sphinx-design.min.css?v=95c83b7e" />
   
@@ -380,6 +380,13 @@ document.write(`
             </div>
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#pipetting-and-arm-systems">Pipetting and Arm Systems</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#core-pipetting-arm">CO‑RE Pipetting Arm</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#fixedtip-pipetting-arm">Fixed‑Tip Pipetting Arm</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#tip-gripper-arm">Tip Gripper Arm</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#highdensity-pipetting-head">High‑Density Pipetting Head</a></li>
+</ul>
+</li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#start-up">Start up</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#important-directories-and-files">Important Directories and Files</a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#main-path">Main Path</a><ul class="nav section-nav flex-column">
@@ -392,13 +399,6 @@ document.write(`
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#method-abortion">Method abortion</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#maintenance">Maintenance</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#pipetting-and-arm-systems">Pipetting and Arm Systems</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#core-pipetting-arm">CO‑RE Pipetting Arm</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#fixedtip-pipetting-arm">Fixed‑Tip Pipetting Arm</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#tip-gripper-arm">Tip Gripper Arm</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#highdensity-pipetting-head">High‑Density Pipetting Head</a></li>
-</ul>
-</li>
 </ul>
             </nav>
         </div>
@@ -412,8 +412,27 @@ document.write(`
                   
   <section class="tex2jax_ignore mathjax_ignore" id="hamilton-star-robot-overview">
 <h1>Hamilton Star Robot Overview<a class="headerlink" href="#hamilton-star-robot-overview" title="Link to this heading">#</a></h1>
-<p>The Hamilton STAR is a flexible, high‑precision liquid‑handling workstation designed to automate virtually any pipetting workflow in your lab—from simple reagent transfers to complex, high‑throughput assay setups. By combining an <em>XYZ</em> gantry with interchangeable pipetting heads (e.g., 8‑ or 96‑channel), grippers and plate shuttles, the STAR can handle microplates, tubes and reservoirs in virtually any format. Integrated software (Venus) allows you to build, simulate and run protocols with drag‑and‑drop simplicity, while on‑deck accessories (shakers, heaters/coolers, tip racks, bar‑code readers) extend its capabilities to include sample mixing, temperature control and plate tracking.</p>
-<p>When planning your STAR workflows, keep in mind key considerations for optimal performance and reliability. First, regular calibration of pipetting channels and deck positions is critical—schedule daily or weekly checks depending on throughput. Use filtered, sterile tips and routinely inspect the wash stations to prevent cross‑contamination. Ensure your deck layout balances throughput with accessibility for cleaning and maintenance: leave clearance around modules for tip loading and waste removal. Finally, maintain a clean, temperature‑controlled environment (ideally 18–25 °C with low humidity) and follow the manufacturer’s preventive‑maintenance schedule (including lubrication and filter changes) to minimize downtime and extend the life of your instrument.</p>
+<p>The Hamilton STAR is a flexible, high‑precision liquid‑handling workstation designed to automate virtually any pipetting workflow in your lab—from simple reagent transfers to complex, high‑throughput assay setups. By combining an <em>XYZ</em> gantry with interchangeable pipetting heads (e.g., 8‑ or 96‑channel), grippers and plate shuttles, the STAR can handle microplates, tubes and reservoirs in virtually any format. Integrated software (Venus) allows you to build, simulate and run protocols with drag‑and‑drop simplicity, while on‑deck accessories (shakers, heaters/coolers, tip racks, bar‑code readers) extend its capabilities to include sample mixing, temperature control and plate tracking.</p>
+<p>When planning your STAR workflows, keep in mind key considerations for optimal performance and reliability. First, regular calibration of pipetting channels and deck positions is critical—schedule daily or weekly checks depending on throughput. Use filtered, sterile tips and routinely inspect the wash stations to prevent cross‑contamination. Ensure your deck layout balances throughput with accessibility for cleaning and maintenance: leave clearance around modules for tip loading and waste removal. Finally, maintain a clean, temperature‑controlled environment (ideally 18–25 °C with low humidity) and follow the manufacturer’s preventive‑maintenance schedule (including lubrication and filter changes) to minimize downtime and extend the life of your instrument.</p>
+<section id="pipetting-and-arm-systems">
+<h2>Pipetting and Arm Systems<a class="headerlink" href="#pipetting-and-arm-systems" title="Link to this heading">#</a></h2>
+<section id="core-pipetting-arm">
+<h3>CO‑RE Pipetting Arm<a class="headerlink" href="#core-pipetting-arm" title="Link to this heading">#</a></h3>
+<p>The STAR’s primary liquid‑handling arm employs Hamilton’s CO‑RE (Compressed O‑Ring Expansion) technology with disposable tips. You can equip it with an 8‑channel head for moderate‑throughput tasks—like serial dilutions, plate‑based assays, or transfers between multiple labware types—or swap in a 96‑channel head to fill or empty entire 96‑well plates in one go. CO‑RE tips “snap” into place with built‑in force sensing, ensuring consistent seating and liquid detection; this yields high accuracy and precision across a broad volume range (typically 0.5–1000 µL) while minimizing tip‑touch and carryover.</p>
+</section>
+<section id="fixedtip-pipetting-arm">
+<h3>Fixed‑Tip Pipetting Arm<a class="headerlink" href="#fixedtip-pipetting-arm" title="Link to this heading">#</a></h3>
+<p>For workflows that involve large‑volume reagent distribution or where consumable costs must be minimized, the STAR can be configured with a fixed‑tip arm. Stainless‑steel tips stay attached to the arm and are cleaned between transfers in an on‑deck wash station. This setup excels at bulk dispensing (e.g., &gt;500 µL per channel) and repetitive transfers where cross‑contamination risk is low—but requires rigorous wash protocols and periodic tip inspection to prevent carryover.</p>
+</section>
+<section id="tip-gripper-arm">
+<h3>Tip Gripper Arm<a class="headerlink" href="#tip-gripper-arm" title="Link to this heading">#</a></h3>
+<p>Beyond liquid handling, the STAR features a dedicated gripper arm for labware manipulation. With two independent gripper modules, it can pick up and reposition plates, tube racks, reservoirs, and tip boxes anywhere on the deck. Automating tip‑rack loading, plate shuttling to off‑deck modules (like plate readers or incubators), and deck reconfiguration mid‑protocol reduces manual intervention and helps maintain reproducible orientation and spacing.</p>
+</section>
+<section id="highdensity-pipetting-head">
+<h3>High‑Density Pipetting Head<a class="headerlink" href="#highdensity-pipetting-head" title="Link to this heading">#</a></h3>
+<p>For ultra‑high‑throughput or miniaturized assays, you can add a 384‑channel pipetting head. This head handles sub‑10 µL volumes across all wells of a 384‑well plate simultaneously, making it ideal for screening campaigns or scarce sample scenarios. Because of the small volumes and high channel count, precise calibration, deck leveling, and regular performance checks are critical to maintain accuracy and avoid well‑to‑well variability.</p>
+</section>
+</section>
 <section id="start-up">
 <h2>Start up<a class="headerlink" href="#start-up" title="Link to this heading">#</a></h2>
 <p>This is the first prompt you will see after starting the Hamilton Venus software. On the left you will see a GUI that allows you to interact with starting, stopping, and tracking the progress of your methods. This is the hub for the high-level implementation of methods. No method editing occurs here.
@@ -480,27 +499,8 @@ This will take you to the maintenance screen, where you can select the type of m
 <li><p><strong>Daily</strong>: Cleaning the deck, checking for clogs, and ensuring all components are functioning properly. This should be done on a daily basis to ensure the instrument is in good working condition.</p></li>
 <li><p><strong>Weekly</strong>: Inspecting and cleaning the pipetting heads, checking the gripper for wear, and ensuring all software is up to date.
 To choose the type of maintenance you would like to perform, select the appropriate icon on the maintenance screen. This will take you to a detailed guide for performing the selected maintenance task.
-<img alt="Weekly" src="Images/Weekly.PNG" /></p></li>
+<img alt="Daily" src="_images/Daily.PNG" /></p></li>
 </ul>
-</section>
-<section id="pipetting-and-arm-systems">
-<h2>Pipetting and Arm Systems<a class="headerlink" href="#pipetting-and-arm-systems" title="Link to this heading">#</a></h2>
-<section id="core-pipetting-arm">
-<h3>CO‑RE Pipetting Arm<a class="headerlink" href="#core-pipetting-arm" title="Link to this heading">#</a></h3>
-<p>The STAR’s primary liquid‑handling arm employs Hamilton’s CO‑RE (Compressed O‑Ring Expansion) technology with disposable tips. You can equip it with an 8‑channel head for moderate‑throughput tasks—like serial dilutions, plate‑based assays, or transfers between multiple labware types—or swap in a 96‑channel head to fill or empty entire 96‑well plates in one go. CO‑RE tips “snap” into place with built‑in force sensing, ensuring consistent seating and liquid detection; this yields high accuracy and precision across a broad volume range (typically 0.5–1000 µL) while minimizing tip‑touch and carryover.</p>
-</section>
-<section id="fixedtip-pipetting-arm">
-<h3>Fixed‑Tip Pipetting Arm<a class="headerlink" href="#fixedtip-pipetting-arm" title="Link to this heading">#</a></h3>
-<p>For workflows that involve large‑volume reagent distribution or where consumable costs must be minimized, the STAR can be configured with a fixed‑tip arm. Stainless‑steel tips stay attached to the arm and are cleaned between transfers in an on‑deck wash station. This setup excels at bulk dispensing (e.g., &gt;500 µL per channel) and repetitive transfers where cross‑contamination risk is low—but requires rigorous wash protocols and periodic tip inspection to prevent carryover.</p>
-</section>
-<section id="tip-gripper-arm">
-<h3>Tip Gripper Arm<a class="headerlink" href="#tip-gripper-arm" title="Link to this heading">#</a></h3>
-<p>Beyond liquid handling, the STAR features a dedicated gripper arm for labware manipulation. With two independent gripper modules, it can pick up and reposition plates, tube racks, reservoirs, and tip boxes anywhere on the deck. Automating tip‑rack loading, plate shuttling to off‑deck modules (like plate readers or incubators), and deck reconfiguration mid‑protocol reduces manual intervention and helps maintain reproducible orientation and spacing.</p>
-</section>
-<section id="highdensity-pipetting-head">
-<h3>High‑Density Pipetting Head<a class="headerlink" href="#highdensity-pipetting-head" title="Link to this heading">#</a></h3>
-<p>For ultra‑high‑throughput or miniaturized assays, you can add a 384‑channel pipetting head. This head handles sub‑10 µL volumes across all wells of a 384‑well plate simultaneously, making it ideal for screening campaigns or scarce sample scenarios. Because of the small volumes and high channel count, precise calibration, deck leveling, and regular performance checks are critical to maintain accuracy and avoid well‑to‑well variability.</p>
-</section>
 </section>
 </section>
 
@@ -568,6 +568,13 @@ To choose the type of maintenance you would like to perform, select the appropri
   </div>
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#pipetting-and-arm-systems">Pipetting and Arm Systems</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#core-pipetting-arm">CO‑RE Pipetting Arm</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#fixedtip-pipetting-arm">Fixed‑Tip Pipetting Arm</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#tip-gripper-arm">Tip Gripper Arm</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#highdensity-pipetting-head">High‑Density Pipetting Head</a></li>
+</ul>
+</li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#start-up">Start up</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#important-directories-and-files">Important Directories and Files</a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#main-path">Main Path</a><ul class="nav section-nav flex-column">
@@ -580,13 +587,6 @@ To choose the type of maintenance you would like to perform, select the appropri
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#method-abortion">Method abortion</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#maintenance">Maintenance</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#pipetting-and-arm-systems">Pipetting and Arm Systems</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#core-pipetting-arm">CO‑RE Pipetting Arm</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#fixedtip-pipetting-arm">Fixed‑Tip Pipetting Arm</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#tip-gripper-arm">Tip Gripper Arm</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#highdensity-pipetting-head">High‑Density Pipetting Head</a></li>
-</ul>
-</li>
 </ul>
   </nav></div>
 
