@@ -1,0 +1,12 @@
+# Table of contents
+# Learn more at https://jupyterbook.org/customize/toc.html
+
+format: jb-book
+root: intro
+chapters:
+- file: robot_overview
+- file: method_overview
+- file: kinetic
+- file: inoculation.ipynb
+- file: normalization
+# - file: advanced
