@@ -1,0 +1,7 @@
+[project]
+name = "worklistgen"
+version = "0.1.0"
+description = "A lab automation worklist generator for Hamilton STAR"
+authors = [{ name = "Alejandro Castellanos", email = "ac931@duke.edu" }]
+license = {text = "MIT"}
+dependencies = ["pandas"]
