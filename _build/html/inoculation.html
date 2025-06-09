@@ -60,7 +60,6 @@
     <script>DOCUMENTATION_OPTIONS.pagename = 'inoculation';</script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="next" title="gDNA Normalization Protocol" href="normalization.html" />
     <link rel="prev" title="Kinetic Cycle Protocol" href="kinetic.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
@@ -184,7 +183,6 @@
 <li class="toctree-l1"><a class="reference internal" href="method_overview.html">Methods Overview</a></li>
 <li class="toctree-l1"><a class="reference internal" href="kinetic.html">Kinetic Cycle Protocol</a></li>
 <li class="toctree-l1 current active"><a class="current reference internal" href="#">Inoculation Protocol</a></li>
-<li class="toctree-l1"><a class="reference internal" href="normalization.html">gDNA Normalization Protocol</a></li>
 </ul>
 
     </div>
@@ -380,13 +378,22 @@ document.write(`
             </div>
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#method">Method</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#layout">Layout</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#worklist-generation">Worklist Generation</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#definition-of-experiemnt-parameters">Definition of experiemnt parameters</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#definition-of-species">Definition of species</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#difining-order-of-community">Difining order of community</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id1">Worklist generation</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#community-assembly">Community Assembly</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#method">Method</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#layout">Layout</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#worklist-generation">Worklist Generation</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#usage-example">Usage Example</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#stamp">Stamp</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id1">Method</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id2">Layout</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#normalization">Normalization</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id3">Method</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id4">Layout</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id5">Worklist Generation</a></li>
 </ul>
 </li>
 </ul>
@@ -402,191 +409,739 @@ document.write(`
                   
   <section class="tex2jax_ignore mathjax_ignore" id="inoculation-protocol">
 <h1>Inoculation Protocol<a class="headerlink" href="#inoculation-protocol" title="Link to this heading">#</a></h1>
+<section id="community-assembly">
+<h2>Community Assembly<a class="headerlink" href="#community-assembly" title="Link to this heading">#</a></h2>
 <section id="method">
-<h2>Method<a class="headerlink" href="#method" title="Link to this heading">#</a></h2>
+<h3>Method<a class="headerlink" href="#method" title="Link to this heading">#</a></h3>
+<ol class="arabic simple">
+<li><p>Navigate to shortcuts and click on ‘Bacteria Culture Workflow’ then ‘Inoculation via worklist’</p></li>
+<li><p>Select desired worklist-ensure it is ordered with media/water aliquots first (see multidispense best practices)</p></li>
+<li><p>Load input and destination lab ware (culture tubes, 96 well plate, etc)</p></li>
+<li><p>Begin the run</p>
+<ul class="simple">
+<li><p>The Hamilton will run the water/media aliquots first, then aliquot the appropriate volume of cultures</p></li>
+</ul>
+</li>
+</ol>
 </section>
 <section id="layout">
-<h2>Layout<a class="headerlink" href="#layout" title="Link to this heading">#</a></h2>
+<h3>Layout<a class="headerlink" href="#layout" title="Link to this heading">#</a></h3>
 <p><img alt="Inoculation Layout" src="_images/Inoculation_layout.PNG" /></p>
 </section>
 <section id="worklist-generation">
-<h2>Worklist Generation<a class="headerlink" href="#worklist-generation" title="Link to this heading">#</a></h2>
+<h3>Worklist Generation<a class="headerlink" href="#worklist-generation" title="Link to this heading">#</a></h3>
+<p>We developed an internal-use package to automate worklist generation in a consistent and reliable way for all kinds of experimental designs. The package is called <code class="docutils literal notranslate"><span class="pre">worklistgen</span></code>. (This is a work in progress, as we continue adding new features and fixing bugs. If you have any suggestions, please let us know.)</p>
+</section>
+<section id="usage-example">
+<h3>Usage Example<a class="headerlink" href="#usage-example" title="Link to this heading">#</a></h3>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">numpy</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">np</span>
-<span class="kn">import</span><span class="w"> </span><span class="nn">matplotlib.pyplot</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">plt</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># import worklistgen and other necessary libraries</span>
 <span class="kn">import</span><span class="w"> </span><span class="nn">pandas</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">pd</span>
-</pre></div>
-</div>
-</div>
-</div>
-<section id="definition-of-experiemnt-parameters">
-<h3>Definition of experiemnt parameters<a class="headerlink" href="#definition-of-experiemnt-parameters" title="Link to this heading">#</a></h3>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">rows</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;A&#39;</span><span class="p">,</span> <span class="s1">&#39;B&#39;</span><span class="p">,</span> <span class="s1">&#39;C&#39;</span><span class="p">,</span> <span class="s1">&#39;D&#39;</span><span class="p">,</span> <span class="s1">&#39;E&#39;</span><span class="p">,</span> <span class="s1">&#39;F&#39;</span><span class="p">,</span> <span class="s1">&#39;G&#39;</span><span class="p">,</span> <span class="s1">&#39;H&#39;</span><span class="p">]</span>
-<span class="n">columns</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">12</span><span class="o">+</span><span class="mi">1</span><span class="p">))</span>
-<span class="n">replicates</span> <span class="o">=</span> <span class="mi">3</span>
-<span class="n">blanks</span> <span class="o">=</span> <span class="mi">3</span>
-<span class="n">plate</span> <span class="o">=</span> <span class="p">[</span><span class="sa">f</span><span class="s1">&#39;</span><span class="si">{</span><span class="n">j</span><span class="si">}{</span><span class="n">i</span><span class="si">}</span><span class="s1">&#39;</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="n">columns</span> <span class="k">for</span> <span class="n">j</span> <span class="ow">in</span> <span class="n">rows</span><span class="p">]</span>
-<span class="n">total_volume</span> <span class="o">=</span> <span class="mi">100</span>
-</pre></div>
-</div>
-</div>
-</div>
-</section>
-<section id="definition-of-species">
-<h3>Definition of species<a class="headerlink" href="#definition-of-species" title="Link to this heading">#</a></h3>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">species</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;EF&#39;</span><span class="p">,</span> <span class="s1">&#39;FP&#39;</span><span class="p">,</span> <span class="s1">&#39;BO&#39;</span><span class="p">,</span> <span class="s1">&#39;CD&#39;</span><span class="p">,</span> <span class="s1">&#39;DI&#39;</span><span class="p">,</span> <span class="s1">&#39;EL&#39;</span><span class="p">,</span> <span class="s1">&#39;BU&#39;</span><span class="p">,</span> <span class="s1">&#39;AC&#39;</span><span class="p">,</span> <span class="s1">&#39;GH&#39;</span><span class="p">,</span> <span class="s1">&#39;IJ&#39;</span><span class="p">,</span> <span class="s1">&#39;KL&#39;</span><span class="p">,</span> <span class="s1">&#39;MN&#39;</span><span class="p">,</span> <span class="s1">&#39;OP&#39;</span><span class="p">,</span> <span class="s1">&#39;QR&#39;</span><span class="p">,</span> <span class="s1">&#39;ST&#39;</span><span class="p">,</span> <span class="s1">&#39;UV&#39;</span><span class="p">,</span> <span class="s1">&#39;WX&#39;</span><span class="p">,</span> <span class="s1">&#39;YZ&#39;</span><span class="p">]</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">worklistgen.core</span><span class="w"> </span><span class="kn">import</span> <span class="n">Source</span><span class="p">,</span> <span class="n">Destination</span><span class="p">,</span> <span class="n">Worklist</span>
 
-<span class="n">species_order</span> <span class="o">=</span> <span class="nb">dict</span><span class="p">(</span><span class="nb">zip</span><span class="p">(</span><span class="n">species</span><span class="p">,</span> <span class="n">plate</span><span class="p">[:</span><span class="nb">len</span><span class="p">(</span><span class="n">species</span><span class="p">)]))</span>
-<span class="n">species_order</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>{&#39;EF&#39;: &#39;A1&#39;,
- &#39;FP&#39;: &#39;B1&#39;,
- &#39;BO&#39;: &#39;C1&#39;,
- &#39;CD&#39;: &#39;D1&#39;,
- &#39;DI&#39;: &#39;E1&#39;,
- &#39;EL&#39;: &#39;F1&#39;,
- &#39;BU&#39;: &#39;G1&#39;,
- &#39;AC&#39;: &#39;H1&#39;,
- &#39;GH&#39;: &#39;A2&#39;,
- &#39;IJ&#39;: &#39;B2&#39;,
- &#39;KL&#39;: &#39;C2&#39;,
- &#39;MN&#39;: &#39;D2&#39;,
- &#39;OP&#39;: &#39;E2&#39;,
- &#39;QR&#39;: &#39;F2&#39;,
- &#39;ST&#39;: &#39;G2&#39;,
- &#39;UV&#39;: &#39;H2&#39;,
- &#39;WX&#39;: &#39;A3&#39;,
- &#39;YZ&#39;: &#39;B3&#39;}
+<span class="kn">import</span><span class="w"> </span><span class="nn">random</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">itertools</span><span class="w"> </span><span class="kn">import</span> <span class="n">combinations</span>
 </pre></div>
 </div>
 </div>
 </div>
-</section>
-<section id="difining-order-of-community">
-<h3>Difining order of community<a class="headerlink" href="#difining-order-of-community" title="Link to this heading">#</a></h3>
+<p>We want to set up everything for creating our worklist.</p>
+<p>First, let’s define the species and media that we are going to use in our experiment.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">communities</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;FP&#39;</span><span class="p">,</span> <span class="s1">&#39;FP-EL-CD&#39;</span><span class="p">,</span> <span class="s1">&#39;FP-EL-CD-BO&#39;</span><span class="p">,</span> <span class="s1">&#39;FP-EL-CD-BO-DI&#39;</span><span class="p">,</span> <span class="s1">&#39;FP-EL-CD-BO-DI-EF&#39;</span><span class="p">,</span> <span class="s1">&#39;FP-EL-CD-BO-DI-EF-BU&#39;</span><span class="p">,</span> <span class="s1">&#39;FP-EL-CD-BO-DI-EF-BU-AC&#39;</span><span class="p">,</span> <span class="s1">&#39;FP-EL-CD-BO-DI-EF-BU-AC-GH&#39;</span><span class="p">,</span> <span class="s1">&#39;FP-EL-CD-BO-DI-EF-BU-AC-GH-IJ&#39;</span><span class="p">,</span> <span class="s1">&#39;FP-EL-CD-BO-DI-EF-BU-AC-GH-IJ-KL&#39;</span><span class="p">,</span> <span class="s1">&#39;FP-EL-CD-BO-DI-EF-BU-AC-GH-IJ-KL-MN&#39;</span><span class="p">,</span> <span class="s1">&#39;FP-EL-CD-BO-DI-EF-BU-AC-GH-IJ-KL-MN-OP&#39;</span><span class="p">,</span> <span class="s1">&#39;FP-EL-CD-BO-DI-EF-BU-AC-GH-IJ-KL-MN-OP-QR&#39;</span><span class="p">,</span> <span class="s1">&#39;FP-EL-CD-BO-DI-EF-BU-AC-GH-IJ-KL-MN-OP-QR-ST&#39;</span><span class="p">,</span> <span class="s1">&#39;FP-EL-CD-BO-DI-EF-BU-AC-GH-IJ-KL-MN-OP-QR-ST-UV&#39;</span><span class="p">,</span> <span class="s1">&#39;FP-EL-CD-BO-DI-EF-BU-AC-GH-IJ-KL-MN-OP-QR-ST-UV-WX&#39;</span><span class="p">,</span> <span class="s1">&#39;FP-EL-CD-BO-DI-EF-BU-AC-GH-IJ-KL-MN-OP-QR-ST-UV-WX-YZ&#39;</span><span class="p">]</span>
-<span class="n">communities_order</span> <span class="o">=</span> <span class="p">[]</span>
-<span class="n">well</span> <span class="o">=</span> <span class="mi">0</span>
-<span class="n">dummy</span> <span class="o">=</span> <span class="mi">0</span>
-<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">communities</span><span class="p">)):</span>
-    <span class="k">for</span> <span class="n">j</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="n">replicates</span> <span class="o">+</span> <span class="mi">1</span><span class="p">):</span>
-        <span class="k">while</span> <span class="n">well</span> <span class="o">%</span> <span class="nb">len</span><span class="p">(</span><span class="n">plate</span><span class="p">)</span> <span class="o">&lt;</span> <span class="n">blanks</span><span class="p">:</span>
-            <span class="n">communities_order</span><span class="o">.</span><span class="n">append</span><span class="p">((</span><span class="s1">&#39;blank&#39;</span><span class="p">,</span> <span class="n">well</span> <span class="o">%</span> <span class="nb">len</span><span class="p">(</span><span class="n">plate</span><span class="p">)</span> <span class="o">+</span><span class="mi">1</span><span class="p">,</span> <span class="n">plate</span><span class="p">[</span><span class="n">well</span> <span class="o">%</span> <span class="nb">len</span><span class="p">(</span><span class="n">plate</span><span class="p">)],</span> <span class="nb">int</span><span class="p">(</span><span class="n">well</span> <span class="o">/</span> <span class="nb">len</span><span class="p">(</span><span class="n">plate</span><span class="p">))</span> <span class="o">+</span> <span class="mi">1</span><span class="p">))</span>
-            <span class="n">dummy</span> <span class="o">+=</span> <span class="mi">1</span>
-            <span class="n">well</span> <span class="o">+=</span> <span class="mi">1</span>
-        <span class="n">communities_order</span><span class="o">.</span><span class="n">append</span><span class="p">((</span><span class="n">communities</span><span class="p">[</span><span class="n">i</span><span class="p">],</span> <span class="n">j</span><span class="p">,</span> <span class="n">plate</span><span class="p">[</span><span class="n">well</span> <span class="o">%</span> <span class="nb">len</span><span class="p">(</span><span class="n">plate</span><span class="p">)],</span> <span class="nb">int</span><span class="p">(</span><span class="n">well</span> <span class="o">/</span> <span class="nb">len</span><span class="p">(</span><span class="n">plate</span><span class="p">))</span> <span class="o">+</span> <span class="mi">1</span><span class="p">))</span>
-        <span class="n">dummy</span> <span class="o">+=</span> <span class="mi">1</span>
-        <span class="n">well</span> <span class="o">+=</span> <span class="mi">1</span>
-<span class="n">communities_order</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Define Species</span>
+<span class="n">species</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;EF&#39;</span><span class="p">,</span> <span class="s1">&#39;FP&#39;</span><span class="p">,</span> <span class="s1">&#39;BO&#39;</span><span class="p">,</span> <span class="s1">&#39;CD&#39;</span><span class="p">,</span> <span class="s1">&#39;DI&#39;</span><span class="p">,</span> <span class="s1">&#39;EL&#39;</span><span class="p">,</span> 
+           <span class="s1">&#39;BU&#39;</span><span class="p">,</span> <span class="s1">&#39;AC&#39;</span><span class="p">,</span> <span class="s1">&#39;GH&#39;</span><span class="p">,</span> <span class="s1">&#39;IJ&#39;</span><span class="p">,</span> <span class="s1">&#39;KL&#39;</span><span class="p">,</span> <span class="s1">&#39;MN&#39;</span><span class="p">,</span> 
+           <span class="s1">&#39;OP&#39;</span><span class="p">,</span> <span class="s1">&#39;QR&#39;</span><span class="p">,</span> <span class="s1">&#39;ST&#39;</span><span class="p">,</span> <span class="s1">&#39;UV&#39;</span><span class="p">,</span> <span class="s1">&#39;WX&#39;</span><span class="p">,</span> <span class="s1">&#39;YZ&#39;</span><span class="p">]</span>
+<span class="c1"># Define Media</span>
+<span class="n">media</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;DM38&#39;</span><span class="p">,</span> <span class="s1">&#39;LB&#39;</span><span class="p">,</span> <span class="s1">&#39;M9&#39;</span><span class="p">,</span> <span class="s1">&#39;M9Glucose&#39;</span><span class="p">,</span> 
+         <span class="s1">&#39;M9Glycerol&#39;</span><span class="p">,</span> <span class="s1">&#39;M9Acetate&#39;</span><span class="p">,</span> <span class="s1">&#39;M9Propionate&#39;</span><span class="p">,</span> <span class="s1">&#39;M9Butyrate&#39;</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>Now, we need to define our sources. We do this using the <code class="docutils literal notranslate"><span class="pre">Source</span></code> class. The <code class="docutils literal notranslate"><span class="pre">Source</span></code> class takes the following parameters:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">name</span></code>: The name (prefix) of the source. This is used to identify the source in the worklist.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">source_type</span></code>: The type of the source. This can be either <code class="docutils literal notranslate"><span class="pre">&quot;species&quot;</span></code> or <code class="docutils literal notranslate"><span class="pre">&quot;media&quot;</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">labware_type</span></code>: The type of labware used for the source. Different labware types have different predefined layouts.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">input</span></code>: A list of inputs.</p></li>
+</ul>
+<p>The main attribute of the <code class="docutils literal notranslate"><span class="pre">Source</span></code> class is <code class="docutils literal notranslate"><span class="pre">well_map</span></code>, which contains the information about the location of each input in the labware.</p>
+<p>Note that we have two sources: one for the species and one for the media. The <code class="docutils literal notranslate"><span class="pre">species</span></code> source contains the species we are going to be using in our experiment, and the <code class="docutils literal notranslate"><span class="pre">media</span></code> source contains the media conditions we are going to be using in our experiment. The <code class="docutils literal notranslate"><span class="pre">species</span></code> source is a 96-well plate, and the <code class="docutils literal notranslate"><span class="pre">media</span></code> source is a 24-tube trough.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Define sources</span>
+<span class="n">source1</span> <span class="o">=</span> <span class="n">Source</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="s1">&#39;species_source&#39;</span><span class="p">,</span> <span class="n">source_type</span><span class="o">=</span><span class="s1">&#39;species&#39;</span><span class="p">,</span> <span class="n">labware_type</span><span class="o">=</span><span class="s1">&#39;96wellplate&#39;</span><span class="p">,</span> <span class="nb">input</span><span class="o">=</span><span class="n">species</span><span class="p">)</span>
+<span class="n">source2</span> <span class="o">=</span> <span class="n">Source</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="s1">&#39;media_source&#39;</span><span class="p">,</span> <span class="n">source_type</span><span class="o">=</span><span class="s1">&#39;media&#39;</span><span class="p">,</span> <span class="n">labware_type</span><span class="o">=</span><span class="s1">&#39;tuberack&#39;</span><span class="p">,</span> <span class="nb">input</span><span class="o">=</span><span class="n">media</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>Lets check the <code class="docutils literal notranslate"><span class="pre">well_map</span></code> of our sources.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">source1</span><span class="o">.</span><span class="n">well_map</span><span class="o">.</span><span class="n">head</span><span class="p">(</span><span class="mi">5</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[(&#39;blank&#39;, 1, &#39;A1&#39;, 1),
- (&#39;blank&#39;, 2, &#39;B1&#39;, 1),
- (&#39;blank&#39;, 3, &#39;C1&#39;, 1),
- (&#39;FP&#39;, 1, &#39;D1&#39;, 1),
- (&#39;FP&#39;, 2, &#39;E1&#39;, 1),
- (&#39;FP&#39;, 3, &#39;F1&#39;, 1),
- (&#39;FP-EL-CD&#39;, 1, &#39;G1&#39;, 1),
- (&#39;FP-EL-CD&#39;, 2, &#39;H1&#39;, 1),
- (&#39;FP-EL-CD&#39;, 3, &#39;A2&#39;, 1),
- (&#39;FP-EL-CD-BO&#39;, 1, &#39;B2&#39;, 1),
- (&#39;FP-EL-CD-BO&#39;, 2, &#39;C2&#39;, 1),
- (&#39;FP-EL-CD-BO&#39;, 3, &#39;D2&#39;, 1),
- (&#39;FP-EL-CD-BO-DI&#39;, 1, &#39;E2&#39;, 1),
- (&#39;FP-EL-CD-BO-DI&#39;, 2, &#39;F2&#39;, 1),
- (&#39;FP-EL-CD-BO-DI&#39;, 3, &#39;G2&#39;, 1),
- (&#39;FP-EL-CD-BO-DI-EF&#39;, 1, &#39;H2&#39;, 1),
- (&#39;FP-EL-CD-BO-DI-EF&#39;, 2, &#39;A3&#39;, 1),
- (&#39;FP-EL-CD-BO-DI-EF&#39;, 3, &#39;B3&#39;, 1),
- (&#39;FP-EL-CD-BO-DI-EF-BU&#39;, 1, &#39;C3&#39;, 1),
- (&#39;FP-EL-CD-BO-DI-EF-BU&#39;, 2, &#39;D3&#39;, 1),
- (&#39;FP-EL-CD-BO-DI-EF-BU&#39;, 3, &#39;E3&#39;, 1),
- (&#39;FP-EL-CD-BO-DI-EF-BU-AC&#39;, 1, &#39;F3&#39;, 1),
- (&#39;FP-EL-CD-BO-DI-EF-BU-AC&#39;, 2, &#39;G3&#39;, 1),
- (&#39;FP-EL-CD-BO-DI-EF-BU-AC&#39;, 3, &#39;H3&#39;, 1),
- (&#39;FP-EL-CD-BO-DI-EF-BU-AC-GH&#39;, 1, &#39;A4&#39;, 1),
- (&#39;FP-EL-CD-BO-DI-EF-BU-AC-GH&#39;, 2, &#39;B4&#39;, 1),
- (&#39;FP-EL-CD-BO-DI-EF-BU-AC-GH&#39;, 3, &#39;C4&#39;, 1),
- (&#39;FP-EL-CD-BO-DI-EF-BU-AC-GH-IJ&#39;, 1, &#39;D4&#39;, 1),
- (&#39;FP-EL-CD-BO-DI-EF-BU-AC-GH-IJ&#39;, 2, &#39;E4&#39;, 1),
- (&#39;FP-EL-CD-BO-DI-EF-BU-AC-GH-IJ&#39;, 3, &#39;F4&#39;, 1),
- (&#39;FP-EL-CD-BO-DI-EF-BU-AC-GH-IJ-KL&#39;, 1, &#39;G4&#39;, 1),
- (&#39;FP-EL-CD-BO-DI-EF-BU-AC-GH-IJ-KL&#39;, 2, &#39;H4&#39;, 1),
- (&#39;FP-EL-CD-BO-DI-EF-BU-AC-GH-IJ-KL&#39;, 3, &#39;A5&#39;, 1),
- (&#39;FP-EL-CD-BO-DI-EF-BU-AC-GH-IJ-KL-MN&#39;, 1, &#39;B5&#39;, 1),
- (&#39;FP-EL-CD-BO-DI-EF-BU-AC-GH-IJ-KL-MN&#39;, 2, &#39;C5&#39;, 1),
- (&#39;FP-EL-CD-BO-DI-EF-BU-AC-GH-IJ-KL-MN&#39;, 3, &#39;D5&#39;, 1),
- (&#39;FP-EL-CD-BO-DI-EF-BU-AC-GH-IJ-KL-MN-OP&#39;, 1, &#39;E5&#39;, 1),
- (&#39;FP-EL-CD-BO-DI-EF-BU-AC-GH-IJ-KL-MN-OP&#39;, 2, &#39;F5&#39;, 1),
- (&#39;FP-EL-CD-BO-DI-EF-BU-AC-GH-IJ-KL-MN-OP&#39;, 3, &#39;G5&#39;, 1),
- (&#39;FP-EL-CD-BO-DI-EF-BU-AC-GH-IJ-KL-MN-OP-QR&#39;, 1, &#39;H5&#39;, 1),
- (&#39;FP-EL-CD-BO-DI-EF-BU-AC-GH-IJ-KL-MN-OP-QR&#39;, 2, &#39;A6&#39;, 1),
- (&#39;FP-EL-CD-BO-DI-EF-BU-AC-GH-IJ-KL-MN-OP-QR&#39;, 3, &#39;B6&#39;, 1),
- (&#39;FP-EL-CD-BO-DI-EF-BU-AC-GH-IJ-KL-MN-OP-QR-ST&#39;, 1, &#39;C6&#39;, 1),
- (&#39;FP-EL-CD-BO-DI-EF-BU-AC-GH-IJ-KL-MN-OP-QR-ST&#39;, 2, &#39;D6&#39;, 1),
- (&#39;FP-EL-CD-BO-DI-EF-BU-AC-GH-IJ-KL-MN-OP-QR-ST&#39;, 3, &#39;E6&#39;, 1),
- (&#39;FP-EL-CD-BO-DI-EF-BU-AC-GH-IJ-KL-MN-OP-QR-ST-UV&#39;, 1, &#39;F6&#39;, 1),
- (&#39;FP-EL-CD-BO-DI-EF-BU-AC-GH-IJ-KL-MN-OP-QR-ST-UV&#39;, 2, &#39;G6&#39;, 1),
- (&#39;FP-EL-CD-BO-DI-EF-BU-AC-GH-IJ-KL-MN-OP-QR-ST-UV&#39;, 3, &#39;H6&#39;, 1),
- (&#39;FP-EL-CD-BO-DI-EF-BU-AC-GH-IJ-KL-MN-OP-QR-ST-UV-WX&#39;, 1, &#39;A7&#39;, 1),
- (&#39;FP-EL-CD-BO-DI-EF-BU-AC-GH-IJ-KL-MN-OP-QR-ST-UV-WX&#39;, 2, &#39;B7&#39;, 1),
- (&#39;FP-EL-CD-BO-DI-EF-BU-AC-GH-IJ-KL-MN-OP-QR-ST-UV-WX&#39;, 3, &#39;C7&#39;, 1),
- (&#39;FP-EL-CD-BO-DI-EF-BU-AC-GH-IJ-KL-MN-OP-QR-ST-UV-WX-YZ&#39;, 1, &#39;D7&#39;, 1),
- (&#39;FP-EL-CD-BO-DI-EF-BU-AC-GH-IJ-KL-MN-OP-QR-ST-UV-WX-YZ&#39;, 2, &#39;E7&#39;, 1),
- (&#39;FP-EL-CD-BO-DI-EF-BU-AC-GH-IJ-KL-MN-OP-QR-ST-UV-WX-YZ&#39;, 3, &#39;F7&#39;, 1)]
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>Source_type</th>
+      <th>Input</th>
+      <th>Well</th>
+      <th>Name</th>
+      <th>Labware_type</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>species</td>
+      <td>EF</td>
+      <td>A1</td>
+      <td>species_source-1</td>
+      <td>96wellplate</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>species</td>
+      <td>FP</td>
+      <td>B1</td>
+      <td>species_source-1</td>
+      <td>96wellplate</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>species</td>
+      <td>BO</td>
+      <td>C1</td>
+      <td>species_source-1</td>
+      <td>96wellplate</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>species</td>
+      <td>CD</td>
+      <td>D1</td>
+      <td>species_source-1</td>
+      <td>96wellplate</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>species</td>
+      <td>DI</td>
+      <td>E1</td>
+      <td>species_source-1</td>
+      <td>96wellplate</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">source2</span><span class="o">.</span><span class="n">well_map</span><span class="o">.</span><span class="n">head</span><span class="p">(</span><span class="mi">5</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>Source_type</th>
+      <th>Input</th>
+      <th>Well</th>
+      <th>Name</th>
+      <th>Labware_type</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>media</td>
+      <td>DM38</td>
+      <td>A1</td>
+      <td>media_source-1</td>
+      <td>tuberack</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>media</td>
+      <td>LB</td>
+      <td>A2</td>
+      <td>media_source-1</td>
+      <td>tuberack</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>media</td>
+      <td>M9</td>
+      <td>A3</td>
+      <td>media_source-1</td>
+      <td>tuberack</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>media</td>
+      <td>M9Glucose</td>
+      <td>A4</td>
+      <td>media_source-1</td>
+      <td>tuberack</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>media</td>
+      <td>M9Glycerol</td>
+      <td>A5</td>
+      <td>media_source-1</td>
+      <td>tuberack</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
+</div>
+<p>Now, we are going to define the location of each of the experimental conditions in the labware. We do this using the <code class="docutils literal notranslate"><span class="pre">Destination</span></code> class. The <code class="docutils literal notranslate"><span class="pre">Destination</span></code> class takes the following parameters:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">name</span></code>: The name (prefix) of the destination. This is used to identify the destination in the worklist.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">labware_type</span></code>: The type of labware used for the destination. Different labware types have different predefined layouts.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">experiements</span></code>: Data frame containing the experimental conditions. The first column should contain the species separated by “-” (<code class="docutils literal notranslate"><span class="pre">community</span></code>) and the second column should contain the media conditions separated by “-” (<code class="docutils literal notranslate"><span class="pre">condition</span></code>). The rest of the columns will be ignored.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">blanks</span></code>: List of blanks to include.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">replicates</span></code>: Number of replicates per experiemntal combination.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">blanks_replicates</span></code>: Number of replicates per blank.</p></li>
+</ul>
+<p>Once again, the most importat attribute of the <code class="docutils literal notranslate"><span class="pre">Destination</span></code> class is <code class="docutils literal notranslate"><span class="pre">well_map</span></code>, which contains the information about the location of each input in the labware.</p>
+<p>Here we are going to generate the experiemnts data frame randomly, but you can also use your own table. The only requirement is that the first column contains the species separated by “-” (<code class="docutils literal notranslate"><span class="pre">community</span></code>) and the second column contains the media conditions separated by “-” (<code class="docutils literal notranslate"><span class="pre">condition</span></code>). The rest of the columns will be ignored.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Randomly generate communities</span>
+<span class="n">community_combinations</span> <span class="o">=</span> <span class="p">[]</span>
+<span class="k">for</span> <span class="n">size</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">species</span><span class="p">)</span> <span class="o">+</span> <span class="mi">1</span><span class="p">):</span>
+    <span class="n">community_combinations</span><span class="o">.</span><span class="n">extend</span><span class="p">(</span><span class="n">combinations</span><span class="p">(</span><span class="n">species</span><span class="p">,</span> <span class="n">size</span><span class="p">))</span>
+<span class="n">random_communities</span> <span class="o">=</span> <span class="n">random</span><span class="o">.</span><span class="n">sample</span><span class="p">(</span><span class="n">community_combinations</span><span class="p">,</span> <span class="mi">60</span><span class="p">)</span>
+<span class="n">communities</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;-&#39;</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">community</span><span class="p">)</span> <span class="k">for</span> <span class="n">community</span> <span class="ow">in</span> <span class="n">random_communities</span><span class="p">]</span>
+
+<span class="c1"># Randomly generate conditions</span>
+<span class="n">condition_combinations</span> <span class="o">=</span> <span class="p">[]</span>
+<span class="k">for</span> <span class="n">size</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">media</span><span class="p">)</span> <span class="o">+</span> <span class="mi">1</span><span class="p">):</span>
+    <span class="n">condition_combinations</span><span class="o">.</span><span class="n">extend</span><span class="p">(</span><span class="n">combinations</span><span class="p">(</span><span class="n">media</span><span class="p">,</span> <span class="n">size</span><span class="p">))</span>
+<span class="n">random_conditions</span> <span class="o">=</span> <span class="n">random</span><span class="o">.</span><span class="n">sample</span><span class="p">(</span><span class="n">condition_combinations</span><span class="p">,</span> <span class="mi">60</span><span class="p">)</span>
+<span class="n">conditions</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;-&#39;</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">condition</span><span class="p">)</span> <span class="k">for</span> <span class="n">condition</span> <span class="ow">in</span> <span class="n">random_conditions</span><span class="p">]</span>
+
+<span class="c1"># Build the experiments DataFrame</span>
+<span class="n">experiments</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">({</span>
+    <span class="s1">&#39;community&#39;</span><span class="p">:</span> <span class="n">communities</span><span class="p">,</span>
+    <span class="s1">&#39;condition&#39;</span><span class="p">:</span> <span class="n">conditions</span><span class="p">,</span>
+<span class="p">})</span>
+<span class="n">experiments</span><span class="o">.</span><span class="n">head</span><span class="p">(</span><span class="mi">10</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>community</th>
+      <th>condition</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>FP-CD-BU-GH-IJ-KL-OP-QR-YZ</td>
+      <td>M9Glucose-M9Glycerol</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>EF-FP-BO-DI-BU-AC-IJ-MN-QR-ST-YZ</td>
+      <td>DM38-M9-M9Glucose-M9Propionate</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>EF-BO-CD-EL-BU-GH-IJ-OP-QR-ST-UV-YZ</td>
+      <td>DM38-M9-M9Propionate</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>FP-CD-DI-EL-BU-AC-GH-MN-OP-UV-WX-YZ</td>
+      <td>LB-M9Acetate</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>EF-BO-CD-DI-GH-KL-ST</td>
+      <td>LB-M9Acetate-M9Butyrate</td>
+    </tr>
+    <tr>
+      <th>5</th>
+      <td>EF-FP-CD-DI-EL-BU-KL-OP-QR-UV-YZ</td>
+      <td>M9Glucose-M9Butyrate</td>
+    </tr>
+    <tr>
+      <th>6</th>
+      <td>BO-EL-GH-KL-MN-ST-UV</td>
+      <td>LB-M9-M9Glucose-M9Glycerol-M9Acetate-M9Butyrate</td>
+    </tr>
+    <tr>
+      <th>7</th>
+      <td>EF-FP-EL-IJ-UV-YZ</td>
+      <td>M9-M9Glycerol-M9Propionate</td>
+    </tr>
+    <tr>
+      <th>8</th>
+      <td>BO-GH-IJ-MN-UV-WX-YZ</td>
+      <td>DM38-LB-M9Glucose-M9Propionate</td>
+    </tr>
+    <tr>
+      <th>9</th>
+      <td>EF-DI-BU-AC-GH-MN-UV-WX-YZ</td>
+      <td>M9-M9Glucose-M9Glycerol-M9Acetate-M9Butyrate</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
+</div>
+<p>Now, lets create or destination object and check its <code class="docutils literal notranslate"><span class="pre">well_map</span></code>.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Define destination</span>
+<span class="n">destination</span> <span class="o">=</span> <span class="n">Destination</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="s1">&#39;destination&#39;</span><span class="p">,</span> <span class="n">labware_type</span><span class="o">=</span><span class="s1">&#39;96wellplate&#39;</span><span class="p">,</span> <span class="n">experiments</span><span class="o">=</span><span class="n">experiments</span><span class="p">,</span> <span class="n">blanks</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;M9Propionate&#39;</span><span class="p">,</span> <span class="s1">&#39;M9Butyrate&#39;</span><span class="p">],</span> <span class="n">replicates</span><span class="o">=</span><span class="mi">3</span><span class="p">,</span> <span class="n">blanks_replicates</span><span class="o">=</span><span class="mi">2</span><span class="p">)</span>
+<span class="n">destination</span><span class="o">.</span><span class="n">well_map</span><span class="o">.</span><span class="n">head</span><span class="p">(</span><span class="mi">10</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>Community</th>
+      <th>Condition</th>
+      <th>Replicate</th>
+      <th>Well</th>
+      <th>Name</th>
+      <th>Labware_type</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>blank</td>
+      <td>M9Propionate</td>
+      <td>1</td>
+      <td>A1</td>
+      <td>destination-1</td>
+      <td>96wellplate</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>blank</td>
+      <td>M9Propionate</td>
+      <td>2</td>
+      <td>B1</td>
+      <td>destination-1</td>
+      <td>96wellplate</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>blank</td>
+      <td>M9Butyrate</td>
+      <td>1</td>
+      <td>C1</td>
+      <td>destination-1</td>
+      <td>96wellplate</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>blank</td>
+      <td>M9Butyrate</td>
+      <td>2</td>
+      <td>D1</td>
+      <td>destination-1</td>
+      <td>96wellplate</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>FP-CD-BU-GH-IJ-KL-OP-QR-YZ</td>
+      <td>M9Glucose-M9Glycerol</td>
+      <td>1</td>
+      <td>E1</td>
+      <td>destination-1</td>
+      <td>96wellplate</td>
+    </tr>
+    <tr>
+      <th>5</th>
+      <td>FP-CD-BU-GH-IJ-KL-OP-QR-YZ</td>
+      <td>M9Glucose-M9Glycerol</td>
+      <td>2</td>
+      <td>F1</td>
+      <td>destination-1</td>
+      <td>96wellplate</td>
+    </tr>
+    <tr>
+      <th>6</th>
+      <td>FP-CD-BU-GH-IJ-KL-OP-QR-YZ</td>
+      <td>M9Glucose-M9Glycerol</td>
+      <td>3</td>
+      <td>G1</td>
+      <td>destination-1</td>
+      <td>96wellplate</td>
+    </tr>
+    <tr>
+      <th>7</th>
+      <td>EF-FP-BO-DI-BU-AC-IJ-MN-QR-ST-YZ</td>
+      <td>DM38-M9-M9Glucose-M9Propionate</td>
+      <td>1</td>
+      <td>H1</td>
+      <td>destination-1</td>
+      <td>96wellplate</td>
+    </tr>
+    <tr>
+      <th>8</th>
+      <td>EF-FP-BO-DI-BU-AC-IJ-MN-QR-ST-YZ</td>
+      <td>DM38-M9-M9Glucose-M9Propionate</td>
+      <td>2</td>
+      <td>A2</td>
+      <td>destination-1</td>
+      <td>96wellplate</td>
+    </tr>
+    <tr>
+      <th>9</th>
+      <td>EF-FP-BO-DI-BU-AC-IJ-MN-QR-ST-YZ</td>
+      <td>DM38-M9-M9Glucose-M9Propionate</td>
+      <td>3</td>
+      <td>B2</td>
+      <td>destination-1</td>
+      <td>96wellplate</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
+</div>
+<p>Finally, we create the <code class="docutils literal notranslate"><span class="pre">Worklist</span></code> object. The <code class="docutils literal notranslate"><span class="pre">Worklist</span></code> class takes the following parameters:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">name</span></code>: The name of the worklist.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">total_volume</span></code>: Total volume of each well.</p></li>
+</ul>
+<p>Because we can have several sources and destinations, we need to add them to the worklist. We do this using the <code class="docutils literal notranslate"><span class="pre">add_source()</span></code> and <code class="docutils literal notranslate"><span class="pre">add_destination()</span></code> methods. After that, we can generate the worklist using the <code class="docutils literal notranslate"><span class="pre">generate_worklist()</span></code> method.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Create worklist</span>
+<span class="n">worklist</span> <span class="o">=</span> <span class="n">Worklist</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="s1">&#39;worklist&#39;</span><span class="p">,</span> <span class="n">total_volume</span><span class="o">=</span><span class="mi">100</span><span class="p">)</span>
+<span class="n">worklist</span><span class="o">.</span><span class="n">add_source</span><span class="p">(</span><span class="n">source1</span><span class="p">)</span>
+<span class="n">worklist</span><span class="o">.</span><span class="n">add_source</span><span class="p">(</span><span class="n">source2</span><span class="p">)</span>
+<span class="n">worklist</span><span class="o">.</span><span class="n">add_destination</span><span class="p">(</span><span class="n">destination</span><span class="p">)</span>
+
+<span class="c1"># Generate worklist</span>
+<span class="n">worklist</span><span class="o">.</span><span class="n">generate_worklist</span><span class="p">()</span>
+<span class="n">worklist</span><span class="o">.</span><span class="n">worklist_df</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>Source_plate_Name</th>
+      <th>Source_Plate_Type</th>
+      <th>Source_Plate_Well</th>
+      <th>Destination_plate_Name</th>
+      <th>Destination_Plate_Type</th>
+      <th>Destination_Plate_Well</th>
+      <th>Transfer_Volume</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>media_source-1</td>
+      <td>tuberack</td>
+      <td>A7</td>
+      <td>destination-1</td>
+      <td>96wellplate</td>
+      <td>A1</td>
+      <td>100.000000</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>media_source-1</td>
+      <td>tuberack</td>
+      <td>A7</td>
+      <td>destination-1</td>
+      <td>96wellplate</td>
+      <td>B1</td>
+      <td>100.000000</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>media_source-1</td>
+      <td>tuberack</td>
+      <td>A8</td>
+      <td>destination-1</td>
+      <td>96wellplate</td>
+      <td>C1</td>
+      <td>100.000000</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>media_source-1</td>
+      <td>tuberack</td>
+      <td>A8</td>
+      <td>destination-1</td>
+      <td>96wellplate</td>
+      <td>D1</td>
+      <td>100.000000</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>species_source-1</td>
+      <td>96wellplate</td>
+      <td>B1</td>
+      <td>destination-1</td>
+      <td>96wellplate</td>
+      <td>E1</td>
+      <td>11.111111</td>
+    </tr>
+    <tr>
+      <th>...</th>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+    </tr>
+    <tr>
+      <th>2330</th>
+      <td>species_source-1</td>
+      <td>96wellplate</td>
+      <td>D2</td>
+      <td>destination-2</td>
+      <td>96wellplate</td>
+      <td>H11</td>
+      <td>14.285714</td>
+    </tr>
+    <tr>
+      <th>2331</th>
+      <td>species_source-1</td>
+      <td>96wellplate</td>
+      <td>E2</td>
+      <td>destination-2</td>
+      <td>96wellplate</td>
+      <td>H11</td>
+      <td>14.285714</td>
+    </tr>
+    <tr>
+      <th>2332</th>
+      <td>species_source-1</td>
+      <td>96wellplate</td>
+      <td>B3</td>
+      <td>destination-2</td>
+      <td>96wellplate</td>
+      <td>H11</td>
+      <td>14.285714</td>
+    </tr>
+    <tr>
+      <th>2333</th>
+      <td>media_source-1</td>
+      <td>tuberack</td>
+      <td>A1</td>
+      <td>destination-2</td>
+      <td>96wellplate</td>
+      <td>H11</td>
+      <td>50.000000</td>
+    </tr>
+    <tr>
+      <th>2334</th>
+      <td>media_source-1</td>
+      <td>tuberack</td>
+      <td>A5</td>
+      <td>destination-2</td>
+      <td>96wellplate</td>
+      <td>H11</td>
+      <td>50.000000</td>
+    </tr>
+  </tbody>
+</table>
+<p>2335 rows × 7 columns</p>
+</div></div></div>
 </div>
 </section>
+</section>
+<section id="stamp">
+<h2>Stamp<a class="headerlink" href="#stamp" title="Link to this heading">#</a></h2>
 <section id="id1">
-<h3>Worklist generation<a class="headerlink" href="#id1" title="Link to this heading">#</a></h3>
+<h3>Method<a class="headerlink" href="#id1" title="Link to this heading">#</a></h3>
+<ol class="arabic simple">
+<li><p>Load input and destination plates (specify locations with dialogue box)</p></li>
+<li><p>Navigate to shortcuts and click on ‘Bacteria Culture Workflow’ then ‘Inoculation/Sample Prep v2.3’</p></li>
+<li><p>Select Plate Stamp</p></li>
+<li><p>Select method parameters</p>
+<ul class="simple">
+<li><p>Specify input and destination lab ware types and locations</p></li>
+<li><p>Specify volume to transfer</p></li>
+<li><p>Specify mix on source trough and number of cycles</p></li>
+</ul>
+</li>
+<li><p>Begin the run</p>
+<ul class="simple">
+<li><p>The Hamilton will stamp one by one from input(s) to destination plate and the run will finish</p></li>
+</ul>
+</li>
+</ol>
+</section>
+<section id="id2">
+<h3>Layout<a class="headerlink" href="#id2" title="Link to this heading">#</a></h3>
+</section>
+</section>
+<section id="normalization">
+<h2>Normalization<a class="headerlink" href="#normalization" title="Link to this heading">#</a></h2>
+<section id="id3">
+<h3>Method<a class="headerlink" href="#id3" title="Link to this heading">#</a></h3>
+<ol class="arabic simple">
+<li><p>After SYBR DNA quantification excel sheet has been generated, run Hamilton_gDNA_normalization.py to generate worklist</p></li>
+<li><p>Navigate to shortcuts and click on ‘Bacteria Culture Workflow’ then ‘Inoculation via worklist’</p></li>
+<li><p>Load source DNA plate, water trough, and destination normalization plate</p></li>
+<li><p>Begin the run</p>
+<ul class="simple">
+<li><p>The Hamilton will run the water aliquots first, then aliquot the appropriate volume of DNA to normalize it.</p></li>
+</ul>
+</li>
+</ol>
+</section>
+<section id="id4">
+<h3>Layout<a class="headerlink" href="#id4" title="Link to this heading">#</a></h3>
+</section>
+<section id="id5">
+<h3>Worklist Generation<a class="headerlink" href="#id5" title="Link to this heading">#</a></h3>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># fill the plate</span>
-<span class="n">worklist</span> <span class="o">=</span> <span class="p">{</span>
-    <span class="s1">&#39;Source_plate_Name&#39;</span><span class="p">:</span> <span class="p">[],</span>
-    <span class="s1">&#39;Source_Plate_Type&#39;</span><span class="p">:</span> <span class="p">[],</span>
-    <span class="s1">&#39;Source_Plate_Well&#39;</span><span class="p">:</span> <span class="p">[],</span>
-    <span class="s1">&#39;Desination_plate_Name&#39;</span><span class="p">:</span> <span class="p">[],</span>
-    <span class="s1">&#39;Destination_Plate_Type&#39;</span><span class="p">:</span> <span class="p">[],</span>
-    <span class="s1">&#39;Destination_Plate_Well&#39;</span><span class="p">:</span> <span class="p">[],</span>
-    <span class="s1">&#39;Transfer_Volume&#39;</span><span class="p">:</span> <span class="p">[]</span>
-<span class="p">}</span>
-<span class="n">worklist</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">!</span>python<span class="w"> </span>250605_Hamilton_gDNA_normalization.py<span class="w"> </span>--excel<span class="w"> </span>gDNA_concentrations_calculation_matrix.xlsx<span class="w"> </span>--tag<span class="w"> </span>my_exp
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Traceback (most recent call last):
+  File <span class=" -Color -Color-Magenta">&quot;/home/acs98/miniconda3/envs/jupyter-book/lib/python3.13/site-packages/pandas/compat/_optional.py&quot;</span>, line <span class=" -Color -Color-Magenta">135</span>, in <span class=" -Color -Color-Magenta">import_optional_dependency</span>
+    module = importlib.import_module(name)
+  File <span class=" -Color -Color-Magenta">&quot;/home/acs98/miniconda3/envs/jupyter-book/lib/python3.13/importlib/__init__.py&quot;</span>, line <span class=" -Color -Color-Magenta">88</span>, in <span class=" -Color -Color-Magenta">import_module</span>
+    return <span class=" -Color -Color-Red">_bootstrap._gcd_import</span><span class=" -Color -Color-Bold -Color-Bold-Red">(name[level:], package, level)</span>
+           <span class=" -Color -Color-Red">~~~~~~~~~~~~~~~~~~~~~~</span><span class=" -Color -Color-Bold -Color-Bold-Red">^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^</span>
+  File <span class=" -Color -Color-Magenta">&quot;&lt;frozen importlib._bootstrap&gt;&quot;</span>, line <span class=" -Color -Color-Magenta">1387</span>, in <span class=" -Color -Color-Magenta">_gcd_import</span>
+  File <span class=" -Color -Color-Magenta">&quot;&lt;frozen importlib._bootstrap&gt;&quot;</span>, line <span class=" -Color -Color-Magenta">1360</span>, in <span class=" -Color -Color-Magenta">_find_and_load</span>
+  File <span class=" -Color -Color-Magenta">&quot;&lt;frozen importlib._bootstrap&gt;&quot;</span>, line <span class=" -Color -Color-Magenta">1324</span>, in <span class=" -Color -Color-Magenta">_find_and_load_unlocked</span>
+<span class=" -Color -Color-Bold -Color-Bold-Magenta">ModuleNotFoundError</span>: <span class=" -Color -Color-Magenta">No module named &#39;openpyxl&#39;</span>
 
-<span class="k">for</span> <span class="n">community</span><span class="p">,</span> <span class="n">replicate</span><span class="p">,</span> <span class="n">well</span><span class="p">,</span> <span class="n">plate</span> <span class="ow">in</span> <span class="n">communities_order</span><span class="p">:</span>
-    <span class="k">if</span> <span class="n">community</span> <span class="o">==</span> <span class="s1">&#39;blank&#39;</span><span class="p">:</span>
-        <span class="n">worklist</span><span class="p">[</span><span class="s1">&#39;Source_plate_Name&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="s1">&#39;media&#39;</span><span class="p">)</span>
-        <span class="n">worklist</span><span class="p">[</span><span class="s1">&#39;Source_Plate_Type&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="s1">&#39;Media_Reservoir&#39;</span><span class="p">)</span>
-        <span class="n">worklist</span><span class="p">[</span><span class="s1">&#39;Source_Plate_Well&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="s1">&#39;A1&#39;</span><span class="p">)</span> <span class="c1"># costumize</span>
-        <span class="n">worklist</span><span class="p">[</span><span class="s1">&#39;Desination_plate_Name&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;96raw-</span><span class="si">{</span><span class="n">plate</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">)</span>
-        <span class="n">worklist</span><span class="p">[</span><span class="s1">&#39;Destination_Plate_Type&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="s1">&#39;RCK_NormalizationPlate&#39;</span><span class="p">)</span>
-        <span class="n">worklist</span><span class="p">[</span><span class="s1">&#39;Destination_Plate_Well&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">well</span><span class="p">)</span>
-        <span class="n">worklist</span><span class="p">[</span><span class="s1">&#39;Transfer_Volume&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">total_volume</span><span class="p">)</span>
-    <span class="k">else</span><span class="p">:</span>
-        <span class="k">for</span> <span class="n">sp</span> <span class="ow">in</span> <span class="n">community</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s1">&#39;-&#39;</span><span class="p">):</span>
-            <span class="n">worklist</span><span class="p">[</span><span class="s1">&#39;Source_plate_Name&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="s1">&#39;96raw&#39;</span><span class="p">)</span>
-            <span class="n">worklist</span><span class="p">[</span><span class="s1">&#39;Source_Plate_Type&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="s1">&#39;RCK_CulturePlate&#39;</span><span class="p">)</span>
-            <span class="n">worklist</span><span class="p">[</span><span class="s1">&#39;Source_Plate_Well&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">species_order</span><span class="p">[</span><span class="n">sp</span><span class="p">])</span>
-            <span class="n">worklist</span><span class="p">[</span><span class="s1">&#39;Desination_plate_Name&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;96raw-</span><span class="si">{</span><span class="n">plate</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">)</span>
-            <span class="n">worklist</span><span class="p">[</span><span class="s1">&#39;Destination_Plate_Type&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="s1">&#39;RCK_NormalizationPlate&#39;</span><span class="p">)</span>
-            <span class="n">worklist</span><span class="p">[</span><span class="s1">&#39;Destination_Plate_Well&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">well</span><span class="p">)</span>
-            <span class="n">worklist</span><span class="p">[</span><span class="s1">&#39;Transfer_Volume&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">total_volume</span><span class="o">/</span><span class="nb">len</span><span class="p">(</span><span class="n">community</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s1">&#39;-&#39;</span><span class="p">)))</span>
-<span class="n">worklist_df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">worklist</span><span class="p">)</span>
-<span class="n">worklist_df</span><span class="o">.</span><span class="n">head</span><span class="p">(</span><span class="mi">10</span><span class="p">)</span>
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File <span class=" -Color -Color-Magenta">&quot;/home/acs98/Documents/Venturelli-lab/hamilton-robot/hamilton-manual/250605_Hamilton_gDNA_normalization.py&quot;</span>, line <span class=" -Color -Color-Magenta">204</span>, in <span class=" -Color -Color-Magenta">&lt;module&gt;</span>
+    sheet1 = load_sheet1(EXCEL_FILE_PATH)
+  File <span class=" -Color -Color-Magenta">&quot;/home/acs98/Documents/Venturelli-lab/hamilton-robot/hamilton-manual/250605_Hamilton_gDNA_normalization.py&quot;</span>, line <span class=" -Color -Color-Magenta">72</span>, in <span class=" -Color -Color-Magenta">load_sheet1</span>
+    xlsx = pd.ExcelFile(filename)
+  File <span class=" -Color -Color-Magenta">&quot;/home/acs98/miniconda3/envs/jupyter-book/lib/python3.13/site-packages/pandas/io/excel/_base.py&quot;</span>, line <span class=" -Color -Color-Magenta">1567</span>, in <span class=" -Color -Color-Magenta">__init__</span>
+    self._reader = <span class=" -Color -Color-Red">self._engines[engine]</span><span class=" -Color -Color-Bold -Color-Bold-Red">(</span>
+                   <span class=" -Color -Color-Red">~~~~~~~~~~~~~~~~~~~~~</span><span class=" -Color -Color-Bold -Color-Bold-Red">^</span>
+        <span class=" -Color -Color-Bold -Color-Bold-Red">self._io,</span>
+        <span class=" -Color -Color-Bold -Color-Bold-Red">^^^^^^^^^</span>
+        <span class=" -Color -Color-Bold -Color-Bold-Red">storage_options=storage_options,</span>
+        <span class=" -Color -Color-Bold -Color-Bold-Red">^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^</span>
+        <span class=" -Color -Color-Bold -Color-Bold-Red">engine_kwargs=engine_kwargs,</span>
+        <span class=" -Color -Color-Bold -Color-Bold-Red">^^^^^^^^^^^^^^^^^^^^^^^^^^^^</span>
+    <span class=" -Color -Color-Bold -Color-Bold-Red">)</span>
+    <span class=" -Color -Color-Bold -Color-Bold-Red">^</span>
+  File <span class=" -Color -Color-Magenta">&quot;/home/acs98/miniconda3/envs/jupyter-book/lib/python3.13/site-packages/pandas/io/excel/_openpyxl.py&quot;</span>, line <span class=" -Color -Color-Magenta">552</span>, in <span class=" -Color -Color-Magenta">__init__</span>
+    <span class=" -Color -Color-Red">import_optional_dependency</span><span class=" -Color -Color-Bold -Color-Bold-Red">(&quot;openpyxl&quot;)</span>
+    <span class=" -Color -Color-Red">~~~~~~~~~~~~~~~~~~~~~~~~~~</span><span class=" -Color -Color-Bold -Color-Bold-Red">^^^^^^^^^^^^</span>
+  File <span class=" -Color -Color-Magenta">&quot;/home/acs98/miniconda3/envs/jupyter-book/lib/python3.13/site-packages/pandas/compat/_optional.py&quot;</span>, line <span class=" -Color -Color-Magenta">138</span>, in <span class=" -Color -Color-Magenta">import_optional_dependency</span>
+    raise ImportError(msg)
+<span class=" -Color -Color-Bold -Color-Bold-Magenta">ImportError</span>: <span class=" -Color -Color-Magenta">Missing optional dependency &#39;openpyxl&#39;.  Use pip or conda to install openpyxl.</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>gDNA worklist:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">gDNA_worklist</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s1">&#39;my_exp_gDNA.csv&#39;</span><span class="p">)</span>
+<span class="n">gDNA_worklist</span><span class="o">.</span><span class="n">head</span><span class="p">(</span><span class="mi">10</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -614,110 +1169,295 @@ document.write(`
       <th>Source_Plate_Well</th>
       <th>Desination_plate_Name</th>
       <th>Destination_Plate_Type</th>
-      <th>Destination_Plate_Well</th>
+      <th>Destination_Well</th>
       <th>Transfer_Volume</th>
+      <th>Tip_Size</th>
+      <th>Liquid_Class</th>
     </tr>
   </thead>
   <tbody>
     <tr>
       <th>0</th>
-      <td>media</td>
-      <td>Media_Reservoir</td>
+      <td>96raw</td>
+      <td>RCK_CulturePlate_00</td>
       <td>A1</td>
-      <td>96raw-1</td>
-      <td>RCK_NormalizationPlate</td>
+      <td>96norm</td>
+      <td>RCK_PCRPlate_00</td>
       <td>A1</td>
-      <td>100.000000</td>
+      <td>4</td>
+      <td>300</td>
+      <td>Water</td>
     </tr>
     <tr>
       <th>1</th>
-      <td>media</td>
-      <td>Media_Reservoir</td>
-      <td>A1</td>
-      <td>96raw-1</td>
-      <td>RCK_NormalizationPlate</td>
+      <td>96raw</td>
+      <td>RCK_CulturePlate_00</td>
       <td>B1</td>
-      <td>100.000000</td>
+      <td>96norm</td>
+      <td>RCK_PCRPlate_00</td>
+      <td>B1</td>
+      <td>16</td>
+      <td>300</td>
+      <td>Water</td>
     </tr>
     <tr>
       <th>2</th>
-      <td>media</td>
-      <td>Media_Reservoir</td>
-      <td>A1</td>
-      <td>96raw-1</td>
-      <td>RCK_NormalizationPlate</td>
+      <td>96raw</td>
+      <td>RCK_CulturePlate_00</td>
       <td>C1</td>
-      <td>100.000000</td>
+      <td>96norm</td>
+      <td>RCK_PCRPlate_00</td>
+      <td>C1</td>
+      <td>16</td>
+      <td>300</td>
+      <td>Water</td>
     </tr>
     <tr>
       <th>3</th>
       <td>96raw</td>
-      <td>RCK_CulturePlate</td>
-      <td>B1</td>
-      <td>96raw-1</td>
-      <td>RCK_NormalizationPlate</td>
+      <td>RCK_CulturePlate_00</td>
       <td>D1</td>
-      <td>100.000000</td>
+      <td>96norm</td>
+      <td>RCK_PCRPlate_00</td>
+      <td>D1</td>
+      <td>31</td>
+      <td>300</td>
+      <td>Water</td>
     </tr>
     <tr>
       <th>4</th>
       <td>96raw</td>
-      <td>RCK_CulturePlate</td>
-      <td>B1</td>
-      <td>96raw-1</td>
-      <td>RCK_NormalizationPlate</td>
+      <td>RCK_CulturePlate_00</td>
       <td>E1</td>
-      <td>100.000000</td>
+      <td>96norm</td>
+      <td>RCK_PCRPlate_00</td>
+      <td>E1</td>
+      <td>15</td>
+      <td>300</td>
+      <td>Water</td>
     </tr>
     <tr>
       <th>5</th>
       <td>96raw</td>
-      <td>RCK_CulturePlate</td>
-      <td>B1</td>
-      <td>96raw-1</td>
-      <td>RCK_NormalizationPlate</td>
+      <td>RCK_CulturePlate_00</td>
       <td>F1</td>
-      <td>100.000000</td>
+      <td>96norm</td>
+      <td>RCK_PCRPlate_00</td>
+      <td>F1</td>
+      <td>19</td>
+      <td>300</td>
+      <td>Water</td>
     </tr>
     <tr>
       <th>6</th>
       <td>96raw</td>
-      <td>RCK_CulturePlate</td>
-      <td>B1</td>
-      <td>96raw-1</td>
-      <td>RCK_NormalizationPlate</td>
+      <td>RCK_CulturePlate_00</td>
       <td>G1</td>
-      <td>33.333333</td>
+      <td>96norm</td>
+      <td>RCK_PCRPlate_00</td>
+      <td>G1</td>
+      <td>50</td>
+      <td>300</td>
+      <td>Water</td>
     </tr>
     <tr>
       <th>7</th>
       <td>96raw</td>
-      <td>RCK_CulturePlate</td>
-      <td>F1</td>
-      <td>96raw-1</td>
-      <td>RCK_NormalizationPlate</td>
-      <td>G1</td>
-      <td>33.333333</td>
+      <td>RCK_CulturePlate_00</td>
+      <td>H1</td>
+      <td>96norm</td>
+      <td>RCK_PCRPlate_00</td>
+      <td>H1</td>
+      <td>50</td>
+      <td>300</td>
+      <td>Water</td>
     </tr>
     <tr>
       <th>8</th>
       <td>96raw</td>
-      <td>RCK_CulturePlate</td>
-      <td>D1</td>
-      <td>96raw-1</td>
-      <td>RCK_NormalizationPlate</td>
-      <td>G1</td>
-      <td>33.333333</td>
+      <td>RCK_CulturePlate_00</td>
+      <td>A2</td>
+      <td>96norm</td>
+      <td>RCK_PCRPlate_00</td>
+      <td>A2</td>
+      <td>3</td>
+      <td>300</td>
+      <td>Water</td>
     </tr>
     <tr>
       <th>9</th>
       <td>96raw</td>
-      <td>RCK_CulturePlate</td>
+      <td>RCK_CulturePlate_00</td>
+      <td>B2</td>
+      <td>96norm</td>
+      <td>RCK_PCRPlate_00</td>
+      <td>B2</td>
+      <td>16</td>
+      <td>300</td>
+      <td>Water</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
+</div>
+<p>Water worklist:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">gDNA_worklist</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s1">&#39;my_exp_water.csv&#39;</span><span class="p">)</span>
+<span class="n">gDNA_worklist</span><span class="o">.</span><span class="n">head</span><span class="p">(</span><span class="mi">10</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>Source_plate_Name</th>
+      <th>Source_Plate_Type</th>
+      <th>Source_Plate_Well</th>
+      <th>Desination_plate_Name</th>
+      <th>Destination_Plate_Type</th>
+      <th>Destination_Well</th>
+      <th>Transfer_Volume</th>
+      <th>Tip_Size</th>
+      <th>Liquid_Class</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>Water</td>
+      <td>Source_plate_type</td>
+      <td>A1</td>
+      <td>96norm</td>
+      <td>RCK_PCRPlate_00</td>
+      <td>A1</td>
+      <td>96</td>
+      <td>300</td>
+      <td>Water</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>Water</td>
+      <td>Source_plate_type</td>
       <td>B1</td>
-      <td>96raw-1</td>
-      <td>RCK_NormalizationPlate</td>
+      <td>96norm</td>
+      <td>RCK_PCRPlate_00</td>
+      <td>B1</td>
+      <td>34</td>
+      <td>300</td>
+      <td>Water</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>Water</td>
+      <td>Source_plate_type</td>
+      <td>C1</td>
+      <td>96norm</td>
+      <td>RCK_PCRPlate_00</td>
+      <td>C1</td>
+      <td>34</td>
+      <td>300</td>
+      <td>Water</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>Water</td>
+      <td>Source_plate_type</td>
+      <td>D1</td>
+      <td>96norm</td>
+      <td>RCK_PCRPlate_00</td>
+      <td>D1</td>
+      <td>19</td>
+      <td>300</td>
+      <td>Water</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>Water</td>
+      <td>Source_plate_type</td>
+      <td>E1</td>
+      <td>96norm</td>
+      <td>RCK_PCRPlate_00</td>
+      <td>E1</td>
+      <td>35</td>
+      <td>300</td>
+      <td>Water</td>
+    </tr>
+    <tr>
+      <th>5</th>
+      <td>Water</td>
+      <td>Source_plate_type</td>
+      <td>F1</td>
+      <td>96norm</td>
+      <td>RCK_PCRPlate_00</td>
+      <td>F1</td>
+      <td>31</td>
+      <td>300</td>
+      <td>Water</td>
+    </tr>
+    <tr>
+      <th>6</th>
+      <td>Water</td>
+      <td>Source_plate_type</td>
+      <td>G1</td>
+      <td>96norm</td>
+      <td>RCK_PCRPlate_00</td>
+      <td>G1</td>
+      <td>0</td>
+      <td>300</td>
+      <td>Water</td>
+    </tr>
+    <tr>
+      <th>7</th>
+      <td>Water</td>
+      <td>Source_plate_type</td>
       <td>H1</td>
-      <td>33.333333</td>
+      <td>96norm</td>
+      <td>RCK_PCRPlate_00</td>
+      <td>H1</td>
+      <td>0</td>
+      <td>300</td>
+      <td>Water</td>
+    </tr>
+    <tr>
+      <th>8</th>
+      <td>Water</td>
+      <td>Source_plate_type</td>
+      <td>A2</td>
+      <td>96norm</td>
+      <td>RCK_PCRPlate_00</td>
+      <td>A2</td>
+      <td>47</td>
+      <td>300</td>
+      <td>Water</td>
+    </tr>
+    <tr>
+      <th>9</th>
+      <td>Water</td>
+      <td>Source_plate_type</td>
+      <td>B2</td>
+      <td>96norm</td>
+      <td>RCK_PCRPlate_00</td>
+      <td>B2</td>
+      <td>34</td>
+      <td>300</td>
+      <td>Water</td>
     </tr>
   </tbody>
 </table>
@@ -766,15 +1506,6 @@ document.write(`
         <p class="prev-next-title">Kinetic Cycle Protocol</p>
       </div>
     </a>
-    <a class="right-next"
-       href="normalization.html"
-       title="next page">
-      <div class="prev-next-info">
-        <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">gDNA Normalization Protocol</p>
-      </div>
-      <i class="fa-solid fa-angle-right"></i>
-    </a>
 </div>
                 </footer>
               
@@ -791,13 +1522,22 @@ document.write(`
   </div>
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#method">Method</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#layout">Layout</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#worklist-generation">Worklist Generation</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#definition-of-experiemnt-parameters">Definition of experiemnt parameters</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#definition-of-species">Definition of species</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#difining-order-of-community">Difining order of community</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id1">Worklist generation</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#community-assembly">Community Assembly</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#method">Method</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#layout">Layout</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#worklist-generation">Worklist Generation</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#usage-example">Usage Example</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#stamp">Stamp</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id1">Method</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id2">Layout</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#normalization">Normalization</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id3">Method</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id4">Layout</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id5">Worklist Generation</a></li>
 </ul>
 </li>
 </ul>

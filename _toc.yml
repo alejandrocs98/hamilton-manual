@@ -8,5 +8,5 @@ chapters:
 - file: method_overview
 - file: kinetic
 - file: inoculation.ipynb
-- file: normalization
+- file: 0d600.ipynb
 # - file: advanced
